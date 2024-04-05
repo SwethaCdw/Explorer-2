@@ -1,0 +1,33 @@
+.header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .logo {
+      width: 150px;
+      height: 40px;
+    }
+  
+    .menu-items {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  
+      .menu-item {
+        margin-left: 20px;
+  
+        a {
+          text-decoration: none;
+          color: #7a1655;
+        }
+  
+        &.active a {
+          font-weight: bold;
+          color: #ff0000;
+        }
+      }
+    }
+  }

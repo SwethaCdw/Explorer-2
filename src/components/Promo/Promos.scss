@@ -1,0 +1,31 @@
+.welcome-page {
+    display: flex;
+    color: #7a1655;
+    .caption-section{
+        flex: 1 1 40%;
+        padding: 60px 0 0 70px;
+        .caption-wrapper{
+            .topic{
+                margin-bottom: 30px;
+            }
+            .description{
+                font-size: 55px;
+                margin-bottom: 50px;
+                span {
+                    font-weight: bold;
+                }
+              
+            }
+        }
+        button {
+            margin-top: 70px;
+        }
+    }
+    .image-section{
+        flex: 1 1 60%;
+        img{
+            width: 100%;
+        }
+    }
+}
+
