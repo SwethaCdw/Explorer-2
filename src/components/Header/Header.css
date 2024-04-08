@@ -6,8 +6,9 @@
   align-items: center;
 }
 .header .logo {
-  width: 150px;
-  height: 40px;
+  width: 140px;
+  height: 35px;
+  cursor: pointer;
 }
 .header .menu-items {
   list-style-type: none;
@@ -16,7 +17,7 @@
   display: flex;
 }
 .header .menu-items .menu-item {
-  margin-left: 20px;
+  margin-left: 35px;
 }
 .header .menu-items .menu-item a {
   text-decoration: none;

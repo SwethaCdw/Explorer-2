@@ -3,17 +3,17 @@ import Header from "../components/Header/Header"
 import Promo from "../components/Promo/Promo"
 import Destinations from '../components/Destinations/Destinations';
 import Contact from "../components/ContactForm/Contact";
+import { placesData } from '../services/places-service';
+import { DESTINATIONS_QUOTE, DESTINATIONS_TITLE } from '../constants/constants';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
     <Header/>
     <Promo/>
-    <Destinations/>
+    <Destinations title={DESTINATIONS_TITLE} quote={DESTINATIONS_QUOTE} places={placesData}/>
     <Contact/> 
-    {/* <Welcome/>
-    <Descriptions/>  
-    <Contact/> */}
     </>
   )
 }
+export default Home;

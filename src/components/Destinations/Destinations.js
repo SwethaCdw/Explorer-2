@@ -1,23 +1,19 @@
 import React from 'react'
 import "./Destinations.css"
 import Card from '../Card/Card';
-import {placesData} from '../../services/places-service';
 
-export default function Descriptions() {
+const Destinations = ({ title, quote, places }) => {
   return (
-    <>
-    <div className='cards'>
-        <div className='content-title'>Destinations</div>
-        <div className='content'>Just for you.Because you and your bike are special to us!</div>
-        <div className='container'>
-        {placesData.map((item) => {
-            return  <>
-            <Card title={item.place} location={item.city} desc={item.shortDescription}/>
-            </>
-            })}
+    <div className='destinations'>
+      <div className='content-title'>{title}</div>
+      <div className='content'>{quote}</div>
+      <div className='container'>
+        {places.map((item, index) => (
+          <Card key={index} title={item.place} location={item.city} desc={item.shortDescription} />
+        ))}
+      </div>
     </div>
-   </div>
-   </>
   )
 }
 
+export default Destinations;

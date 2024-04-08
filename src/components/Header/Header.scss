@@ -6,8 +6,9 @@
     align-items: center;
   
     .logo {
-      width: 150px;
-      height: 40px;
+      width: 140px;
+      height: 35px;
+      cursor: pointer;
     }
   
     .menu-items {
@@ -17,7 +18,7 @@
       display: flex;
   
       .menu-item {
-        margin-left: 20px;
+        margin-left: 35px;
   
         a {
           text-decoration: none;

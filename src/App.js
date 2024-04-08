@@ -5,15 +5,16 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import  Home from '../src/pages/Home';
-
+import Home from '../src/pages/Home';
+import Details from '../src/pages/Details';
 
 function App() {
   return (
     <>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
+              <Route path="/" exact element={<Home />} />
+              <Route path="/place/:placeName" element={<Details />} />
             </Routes>
         </BrowserRouter>  
     </>

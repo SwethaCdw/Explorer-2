@@ -1,34 +1,37 @@
-import React, { useState, useEffect } from 'react'
-import Dropdown from '../../common/dropdown/dropdown';
-import {Link}from 'react-router-dom'
+import React, { useState } from 'react'
+import DropdownComponent from '../../common/dropdown/dropdown';
+import { Link } from 'react-router-dom';
 import './Promos.css';
-import { placesData } from '../../services/places-service';
-const Promo =() => {
-  const [ cityNames, setCityNames ] = useState([]);
+import promoImage from '../../assets/bike.png';
+import { EXPLORE_BUTTON, MAIN_CAPTION, MAIN_TITLE } from '../../constants/constants';
 
-  useEffect(() => {
-    const names = placesData.map(place => place.city);
-    setCityNames(names);
-  }, []);
+const Promo = () => {
+  const [ explorePlace, setExplorePlace ] = useState('');
+
+  const handlePlaceSelection = (placeToBeExplored) => {
+    setExplorePlace(placeToBeExplored);
+  }
 
   return (
-    <div className='wrapper-class'>
+    <>
       <div className='welcome-page'>
-          <section className='caption-section'>
-            <div className='caption-wrapper'>
-              <div className='topic'>WELCOME TO EXPLORER</div>
-              <div className='description'>Your Adventure Travel Expert in the <span>SOUTH</span></div>
-            </div>
-            <div>
-              <Dropdown className={'explore-place'} dropDown={'place'} dropDownData={cityNames}/>
-              <Link><button>EXPLORE</button></Link>
-            </div>  
-          </section>
-          <section className='image-section'>
-              <img src="assets/bike.png" alt='bike'/>
-          </section>
+        <section className='caption-section'>
+          <div className='caption-wrapper'>
+            <div className='topic'>{MAIN_TITLE}</div>
+            <div className='description'>{MAIN_CAPTION}</div>
+          </div>
+          <div>
+            <DropdownComponent className={'explore-place'} dropDown={'place'} dropDownData={handlePlaceSelection}/>
+            <Link to={`/place/${explorePlace}`}>
+              <button>{EXPLORE_BUTTON}</button>
+            </Link>
+          </div>  
+        </section>
+        <section className='image-section'>
+            <img src={promoImage} alt='bike'/>
+        </section>
       </div>
-    </div>
+    </>
   );
 };
 export default Promo;
