@@ -1,16 +1,37 @@
-.img-container{
-    display: inline-block;
-    margin: 30px auto;
-    width: 30%;
-    padding: 10px;
-  }
-  .title{
+@import '../../styles/variables.scss';
+
+.card-container {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  width: 30%;
+  padding: 10px;
+
+  img {
+    object-fit: cover;
     width: 100%;
-    margin-bottom: 10px;
-    font-size: 26px;
+    height: 300px;
+    max-width: 400px;
+  }
+
+  .title {
+    width: 100%;
+    margin: 10px 0;
+    font-size: $font-size-medium;
     font-weight: 300;
   }
-  .city-names{
-    font-family: 'Roboto', sans-serif;
+
+  .city-names {
     font-weight: 700;
   }
+
+  .read-more-button {
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .description {
+    margin-bottom: 75px;
+    margin-top: 25px;
+  }
+}

@@ -8,7 +8,8 @@
         "Chidambaram",
         "Kumbakonam",
         "Tirunelveli"
-        ]
+        ],
+        "image": "https://github.com/SwethaCdw/image/blob/main/pollachi.png?raw=true"
     },
     {
         "place":"Small Ride across town in mid summer heat",
@@ -19,7 +20,8 @@
         "Masinagudi",
         "Kumbakonam",
         "Tirunelveli"
-        ]
+        ],
+        "image": "https://github.com/SwethaCdw/image/blob/main/thanjavur.png?raw=true"
     },
     {
         "place":"Catching a Short Break at the Lotus Pond",
@@ -30,7 +32,8 @@
         "Kumbakonam",
         "Thanjavur",
         "Tirunelveli"
-        ]
+        ],
+        "image": "https://github.com/SwethaCdw/image/blob/main/chidambaram.png?raw=true"
     },
     {
         "place":"Road Trip enroute the montains and forests",
@@ -41,7 +44,8 @@
         "Tirunelveli",
         "Kumbakonam",
         "Thanjavur"
-        ]
+        ],
+        "image": "https://github.com/SwethaCdw/image/blob/main/masangudi.png?raw=true"
     },
     {
         "place":"Fall in love with the divine agraharams",
@@ -52,7 +56,8 @@
         "Chidambaram",
         "Masinagudi",
         "Thanjavur"
-        ]
+        ],
+        "image": "https://github.com/SwethaCdw/image/blob/main/kumbakonam.png?raw=true"
     },
     {
         "place":"Energy driven drive through the wind mills",
@@ -63,6 +68,7 @@
         "Chidambaram",
         "Kumbakonam",
         "Masinagudi"
-        ]
+        ],
+        "image": "https://github.com/SwethaCdw/image/blob/main/tirunelveli.png?raw=true"
     }
-    ]
+]

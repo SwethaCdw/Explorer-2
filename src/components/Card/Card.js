@@ -1,25 +1,17 @@
+import { READ_MORE_BUTTON } from "../../constants/constants"
+import { handleImageError, scrollToTop } from "../../utils/utils"
 import "./Card.css"
 import {Link}from 'react-router-dom'
 
-export default function Card({ title, location, desc }) {
-  const imageSource = `../assets/Pollachi.png`;
+export default function Card({ title, location, desc, imageSource}) {
 
-  const scrollToTop = () => {
-    window.scrollTo(0, 0)
-  }
   return (
-    <div className='img-container'>
-      <img src={imageSource} width="100%" alt="Location"/>
-      <p className='title'>
-        {title}
-      </p>
-      <span className='city-names'>
-        {location}
-      </span>
-        <p><br/>
-          {desc}
-      </p>
-      <Link to={`/place/${location}`} ><button onClick={scrollToTop}>READ MORE</button></Link>
+    <div className='card-container'>
+      <img src={imageSource} onError={handleImageError} alt="Location"/>
+      <p className='title'>{title}</p>
+      <span className='city-names'>{location}</span>
+      <p className="description"> {desc}</p>
+      <Link to={`/place/${location}`} ><button className="read-more-button" onClick={scrollToTop}>{READ_MORE_BUTTON}</button></Link>
     </div>
   )
 }

@@ -1,72 +1,102 @@
-import React, {useEffect} from 'react' 
-import DropdownComponent from '../../common/dropdown/dropdown'; 
-import { useState } from "react"; 
-import "./Contact.css" 
-import ConfirmationMessage from '../ConfirmationMessage/ConfirmationMessage'; 
-import { CONTACT_FORM_TITLE } from '../../constants/constants';
-export default function Contact() { 
+import React, { useState, useEffect } from 'react';
+import DropdownComponent from '../../common/dropdown/dropdown';
+import ConfirmationMessage from '../ConfirmationMessage/ConfirmationMessage';
+import { CONTACT_FORM_CAPTION, CONTACT_FORM_TITLE, FORM_INPUTS } from '../../constants/constants';
+import './Contact.css';
+import { scrollToBottom } from '../../utils/utils';
+
+const Contact = () => { 
+    // State variables
     const [name, setName] = useState(""); 
+    const [contact, setContact] = useState(""); 
     const [boardingPoint, setBoardingPoint] = useState(""); 
     const [destination, setDestinationPoint] = useState(""); 
-    const [display, setDisplay]= useState(false);
+    const [displayMessage, setDisplayMessage]= useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+    const [showError, setShowError] = useState(false);
 
+    // Effect to scroll to bottom when displayMessage changes
     useEffect(() => {
-        if (display) {
+        if (displayMessage) {
             scrollToBottom();
         }
-    }, [display]);
+    }, [displayMessage]);
     
-    const getBoardingPoint = (boardingPoint) => { 
+    /**
+     * Event handler for selecting boarding point
+     * @param {*} boardingPoint 
+     */
+    const handleBoardingPointSelect = (boardingPoint) => { 
         setBoardingPoint(boardingPoint); 
-        setDisplay(false);
-    } 
-    const getDestinationPoint = (destinationPoint) => { 
-        setDestinationPoint(destinationPoint); 
-        setDisplay(false);
+        setDisplayMessage(false);
     } 
 
+    /**
+     * Event handler for selecting destination
+     * @param {*} destinationPoint 
+     */
+    const handleDestinationSelect = (destinationPoint) => { 
+        setDestinationPoint(destinationPoint); 
+        setDisplayMessage(false);
+    } 
+
+    /**
+     * Form submission handler
+     * @param {*} event 
+     */
     const handleSubmit = event => { 
-        setDisplay(true);
         event.preventDefault(); 
+        if(!name || !contact || !boardingPoint || !destination){
+            setErrorMessage('Please fill in all fields.');
+            setShowError(true);
+        } else {
+            setDisplayMessage(true);
+            setName('');
+            setBoardingPoint('');
+            setDestinationPoint('');
+            setContact('');
+            setErrorMessage('');
+            setShowError(false);
+        }
     }; 
 
-    function scrollToBottom() {
-        console.log('scroll to bottom');
-        window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: 'smooth'
-        });
-      }
-
     return ( 
-    <section className='bottom-section'> 
-        <div className='bottom-wrapper'> 
-            <div className='bottom-section-title'>
-                <span className='contact'>{CONTACT_FORM_TITLE}</span><br/>
-                <span className='contact-sub'>Our Sales Team will reach out to you ASAP!</span>
-            </div> 
-            <div className='card'> 
-                <form onSubmit={handleSubmit}> 
-                    <div className='container-bottom'>
-                        <label>Name</label><br/>
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)}/> 
-                    </div> 
-                    <div className='container-bottom'>
-                        <label>Your Home Town</label> 
-                        <DropdownComponent className='txt-box' dropDown={'home'} dropDownData={getBoardingPoint}/> 
-                    </div>
-                    <div className='container-bottom'> 
-                        <label>Where would you like to go?</label>
-                        <DropdownComponent className='txt-box' dropDown={'destinations'} dropDownData={getDestinationPoint}/>
-                    </div> 
-                    <div className='container-bottom' style={{margin: "0"}}>
-                        <label>Contact Number</label><br/>
-                        <input type="number" /> 
-                    </div> 
-                    <button>SUBMIT INTEREST</button>
-                </form> 
-            </div> 
-        {display && <ConfirmationMessage user={name} start={boardingPoint} end={destination} /> }
-        </div> 
-    </section> 
-    ) }
+        <section className='contact-section'>
+            <div className='contact-wrapper'>
+                <div className='contact-title'>
+                    <h1>{CONTACT_FORM_TITLE}</h1>
+                    <p className='contact-caption'>{CONTACT_FORM_CAPTION}</p>
+                </div>
+                <div className='contact-card'>
+                    <form onSubmit={handleSubmit}>
+                        <div className='form-group'>
+                            <label>{FORM_INPUTS.NAME}</label><br />
+                            <input type="text" value={name} onChange={e => setName(e.target.value)} />
+                        </div>
+                        <div className='form-group'>
+                            <label>{FORM_INPUTS.HOME_TOWN}</label>
+                            <DropdownComponent className='contact-dropdown' dropDownData={handleBoardingPointSelect} />
+                        </div>
+                        <div className='form-group'>
+                            <label>{FORM_INPUTS.DESTINATION}</label>
+                            <DropdownComponent className='contact-dropdown' dropDownData={handleDestinationSelect} />
+                        </div>
+                        <div className='form-group'>
+                            <label>{FORM_INPUTS.CONTACT}</label><br />
+                            <input type="number" onChange={e => setContact(e.target.value)}/>
+                        </div>
+                        <div className={`error-message ${showError ? 'show' : ''}`}>
+                        {errorMessage}
+                        </div>
+                        <button className='submit-button' type="submit">{FORM_INPUTS.SUBMIT_BUTTON}</button>
+                      
+                    </form>
+                </div>
+               
+                {displayMessage && <ConfirmationMessage user={name} start={boardingPoint} end={destination} />}
+            </div>
+        </section>
+    ) 
+}
+
+    export default Contact;

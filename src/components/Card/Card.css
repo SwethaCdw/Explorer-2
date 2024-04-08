@@ -1,18 +1,31 @@
-.img-container {
+.card-container {
+  position: relative;
   display: inline-block;
   margin: 30px auto;
   width: 30%;
   padding: 10px;
 }
-
-.title {
+.card-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
-  margin-bottom: 10px;
-  font-size: 26px;
+  height: 300px;
+  max-width: 400px;
+}
+.card-container .title {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 1.625rem;
   font-weight: 300;
 }
-
-.city-names {
-  font-family: "Roboto", sans-serif;
+.card-container .city-names {
   font-weight: 700;
+}
+.card-container .read-more-button {
+  position: absolute;
+  bottom: 20px;
+}
+.card-container .description {
+  margin-bottom: 75px;
+  margin-top: 25px;
 }/*# sourceMappingURL=Card.css.map */

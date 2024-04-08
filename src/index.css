@@ -13,11 +13,33 @@ body {
   }
   
   button{
-    padding: 15px 30px;
+    padding: 10px 30px;
     margin-top: 30px;
     background-color: rgb(112, 32, 83);
     color: white;
     font-weight: bold;
     border: 0px;
     cursor: pointer;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 12px;
+  padding-right: 2.2rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  visibility: hidden;
+}
+
+
+.error-message.show {
+  visibility: visible;
 }

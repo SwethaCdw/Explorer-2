@@ -1,7 +1,8 @@
 
-export const placesData = await fetch('https://nijin-server.vercel.app/api/explorer')
+export const placesData = await fetch('/resources/places.json')
 .then(response => response.json())
 .then(data => {
+    console.log(data);
     return data;
 })
 .catch(error => console.error('Error reading JSON file:', error));

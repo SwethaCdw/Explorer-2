@@ -1,0 +1,13 @@
+import PollachiImage from '../assets/Pollachi.png';
+import ChidambaramImage from '../assets/Chidambaram.png';
+import KumbakonamImage from '../assets/Kumbakonam.png';
+import MasinagudiImage from '../assets/Masinagudi.png';
+import ThanjavurImage from '../assets/Thanjavur.png';
+import TirunelveliImage from '../assets/Tirunelveli.png';
+
+export const getImageForCity = (city) => {
+    console.log(city);
+    const image = city+'Image';
+    console.log(image);
+    return image;
+}

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import './Promos.css';
 import promoImage from '../../assets/bike.png';
 import { EXPLORE_BUTTON, MAIN_CAPTION, MAIN_TITLE } from '../../constants/constants';
+import { handleImageError } from '../../utils/utils';
+
 
 const Promo = () => {
   const [ explorePlace, setExplorePlace ] = useState('');
@@ -11,14 +13,14 @@ const Promo = () => {
   const handlePlaceSelection = (placeToBeExplored) => {
     setExplorePlace(placeToBeExplored);
   }
-
+  
   return (
     <>
       <div className='welcome-page'>
         <section className='caption-section'>
           <div className='caption-wrapper'>
             <div className='topic'>{MAIN_TITLE}</div>
-            <div className='description'>{MAIN_CAPTION}</div>
+            <div className='description'>{MAIN_CAPTION} <span>SOUTH</span></div>
           </div>
           <div>
             <DropdownComponent className={'explore-place'} dropDown={'place'} dropDownData={handlePlaceSelection}/>
@@ -28,7 +30,7 @@ const Promo = () => {
           </div>  
         </section>
         <section className='image-section'>
-            <img src={promoImage} alt='bike'/>
+            <img src={promoImage} alt='bike' onError={handleImageError}/>
         </section>
       </div>
     </>

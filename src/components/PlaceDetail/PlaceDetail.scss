@@ -1,32 +1,38 @@
+@import '../../styles/variables.scss';
 .place-promo {
     display: flex;
     justify-content: space-between;
     padding-left: 30px;
     .place-highlight {
-        flex: 1 1 45%;
-        padding-left: 50px;
+        flex: 1 1 40%;
+        padding: 15% 0 45px 7%;
         .title{
             width: 100%;
-            margin-top: 45%;
-            font-size: 40px;
+            font-size: $font-size-x-large;
             margin-bottom: 20px;
             font-weight: 400;
             color: #7a1655;
         }
         .quote{
-            font-size: 40px;
+            font-size: $font-size-large;
             background-color: purple;
             color: white;
             position: absolute;
             width: 50%;
-            padding: 30px;
+            padding: 45px;
             font-weight: 500;
+        }
+        .temperature{
+            margin-top: 220px;
+            font-size: $font-size-large;
         }
     }
     .logo{
-        flex: 1 1 55%;
+        flex: 1 1 60%;
         img{
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }
@@ -34,6 +40,6 @@
     margin: 40px auto;
     width: 90%;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: $font-size-small;
     text-align: justify;
 }
