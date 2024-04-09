@@ -8,8 +8,10 @@ import './Promos.css';
 
 
 const Promo = () => {
+  // State variable to store the selected place for exploration
   const [ explorePlace, setExplorePlace ] = useState('');
 
+  // Function to handle the selection of a place for exploration
   const handlePlaceSelection = (placeToBeExplored) => {
     setExplorePlace(placeToBeExplored);
   }

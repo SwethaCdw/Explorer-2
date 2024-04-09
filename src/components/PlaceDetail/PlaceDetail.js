@@ -1,5 +1,7 @@
+import React from 'react';
 import { TEMPERATURE, TEMPERATURE_UNIT } from '../../constants/constants';
 import './PlaceDetail.css';
+import PropTypes from 'prop-types';
 
 const PlaceDetail = ({ place }) => {
     return (
@@ -22,5 +24,14 @@ const PlaceDetail = ({ place }) => {
         </div>
     )
 }
+
+PlaceDetail.propTypes = {
+    place: PropTypes.shape({
+        city: PropTypes.string.isRequired,
+        place: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        fullDescription: PropTypes.string.isRequired,
+    }).isRequired,
+};
 
 export default PlaceDetail;

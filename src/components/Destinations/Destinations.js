@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '../Card/Card';
 import "./Destinations.css"
+import PropTypes from 'prop-types';
 
 const Destinations = ({ title, quote, places }) => {
   return (
@@ -15,5 +16,19 @@ const Destinations = ({ title, quote, places }) => {
     </div>
   )
 }
+
+Destinations.propTypes = {
+  title: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired,
+  places: PropTypes.arrayOf(
+    PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      place: PropTypes.string.isRequired,
+      shortDescription: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+
 
 export default Destinations;

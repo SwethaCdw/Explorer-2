@@ -2,6 +2,7 @@ import { READ_MORE_BUTTON } from "../../constants/constants";
 import { handleImageError, scrollToTop } from "../../utils/utils";
 import { Link } from 'react-router-dom';
 import "./Card.css";
+import PropTypes from 'prop-types'; 
 
 const Card = ({ title, location, desc, imageSource}) => {
 
@@ -15,5 +16,12 @@ const Card = ({ title, location, desc, imageSource}) => {
     </div>
   )
 }
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  imageSource: PropTypes.string.isRequired
+};
 
 export default Card;
