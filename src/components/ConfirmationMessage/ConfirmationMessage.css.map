@@ -1,1 +1,1 @@
-{"version":3,"sources":["ConfirmationMessage.scss","../../styles/variables.scss","ConfirmationMessage.css"],"names":[],"mappings":"AAEA;EACI,UAAA;EACA,aAAA;EACA,cAAA;EACA,kCAAA;EACA,YAAA;EACA,gBAAA;EACA,iBCRc;EDSd,iBAAA;AEDJ","file":"ConfirmationMessage.css"}
+{"version":3,"sources":["ConfirmationMessage.scss","../../styles/colors.scss","../../styles/variables.scss","ConfirmationMessage.css"],"names":[],"mappings":"AAGA;EACI,cAAA;EACA,UAAA;EACA,aAAA;EACA,yBCPY;EDQZ,WCLS;EDMT,iBAAA;EACA,gBAAA;EACA,gBEFU;ACAd;AHGI;EACI,iBAAA;AGDR","file":"ConfirmationMessage.css"}

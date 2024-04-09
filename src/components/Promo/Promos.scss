@@ -1,8 +1,9 @@
 @import '../../styles/variables.scss';
+@import '../../styles/colors.scss';
 
 .welcome-page {
     display: flex;
-    color: #7a1655;
+    color: $primary-color;
     margin-bottom: 75px;
     .caption-section{
         flex: 1 1 40%;

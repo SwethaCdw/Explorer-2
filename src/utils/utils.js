@@ -1,5 +1,9 @@
 import { FALLBACK_IMAGE } from '../constants/constants';
 
+
+/**
+ * Scroll to bottom of the page
+ */
 export const scrollToBottom = () => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
@@ -7,10 +11,12 @@ export const scrollToBottom = () => {
     });
   }
 
-
- export const scrollToTop = () => {
-    window.scrollTo(0, 0)
-  }
+/**
+ * Scroll to top of the page
+ */
+export const scrollToTop = () => {
+  window.scrollTo(0, 0)
+}
   
 
   

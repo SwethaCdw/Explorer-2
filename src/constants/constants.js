@@ -1,7 +1,8 @@
 export const MENU_ITEMS = ['Hotels', 'Bike Rentals', 'Restaurants'];
 
 export const MAIN_TITLE = 'WELCOME TO EXPLORER';
-export const MAIN_CAPTION = `Your Adventure Travel Expert in the `
+export const MAIN_CAPTION = `Your Adventure Travel Expert in the `;
+export const MAIN_CAPTION_SOUTH = 'SOUTH';
 
 export const EXPLORE_BUTTON = 'EXPLORE';
 
@@ -34,3 +35,9 @@ export const CONTACT_CONFIRMATION_MESSAGE = {
     FROM: 'from',
     TO: 'to'
 }
+
+export const ERROR_MESSAGE = 'Please fill in all fields.';
+
+export const ERROR_PAGE = 'You have chosen an invalid option';
+export const TEMPERATURE = '32';
+export const TEMPERATURE_UNIT = '\u00B0C'; 

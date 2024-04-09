@@ -2,53 +2,58 @@
   padding-top: 50px;
   height: 650px;
 }
-
-.contact-title, .contact-card {
-  width: 40%;
-  margin: 30px auto;
-}
-
-.contact-title {
-  color: rgb(112, 32, 83);
-}
-.contact-title h1 {
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-.contact-title p {
-  font-weight: 400;
-}
-
-.contact-card {
-  width: 40%;
-}
-
-.contact-caption {
-  color: rgb(140, 77, 119);
-  font-size: 1.25rem;
-}
-
-.contact-wrapper {
+.contact-section .contact-wrapper {
   width: 100%;
   margin: 0 auto;
   padding: 50px 0;
   background-color: #f8f7f7;
 }
-
-.form-group {
+.contact-section .contact-wrapper .contact-title,
+.contact-section .contact-wrapper .contact-card {
+  width: 40%;
+  margin: 30px auto;
+}
+.contact-section .contact-wrapper .contact-title h1,
+.contact-section .contact-wrapper .contact-card h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #7a1655;
+}
+.contact-section .contact-wrapper .contact-title p,
+.contact-section .contact-wrapper .contact-card p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #7a1655;
+}
+.contact-section .contact-wrapper .contact-card {
+  width: 40%;
+}
+.contact-section .contact-wrapper .contact-caption {
+  font-size: 1.25rem;
+  color: #7a1655;
+}
+.contact-section .contact-wrapper .form-group {
   font-weight: 500;
   margin: 40px 0;
 }
-
-select, input[type=text], input[type=number] {
+.contact-section .contact-wrapper .form-group select,
+.contact-section .contact-wrapper .form-group input[type=text],
+.contact-section .contact-wrapper .form-group input[type=number] {
   width: 100%;
   height: 50px;
   padding-left: 10px;
   margin-top: 5px;
-  border: 0.5px solid black;
+  border: 0.5px solid #000;
   background-color: transparent;
 }
-
-.submit-button {
+.contact-section .contact-wrapper .submit-button {
   margin: 0;
+}
+.contact-section .contact-wrapper .error-message {
+  color: #ff0000;
+  margin-top: 10px;
+  display: none;
+}
+.contact-section .contact-wrapper .error-message.show {
+  display: block;
 }/*# sourceMappingURL=Contact.css.map */

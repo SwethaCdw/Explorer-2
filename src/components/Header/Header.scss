@@ -1,9 +1,9 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
 .header {
-    background-color: #fff;
+    background-color: $dropdown-background;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-align(space-between);
   
     .logo {
       width: 140px;
@@ -12,23 +12,21 @@
     }
   
     .menu-items {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
       display: flex;
+      list-style-type: none;
   
       .menu-item {
         margin-left: 35px;
-        color: #7a1655;
+        color: $primary-color;
   
         a {
           text-decoration: none;
-          color: #7a1655;
+          color: $primary-color;
         }
   
         &.active a {
           font-weight: bold;
-          color: #ff0000;
+          color: $error-color;
         }
       }
     }

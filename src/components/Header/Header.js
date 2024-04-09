@@ -7,13 +7,13 @@ const Header = () => {
   return (
     <section className='header'>  
     <Logo />          
-      <nav className='nav-bar'>
-        <ul className='menu-items'>
-            {MENU_ITEMS.map((item, index) => (
-              <li className='menu-item' key={index}>{item}</li>
-            ))}
-        </ul>
-      </nav>
+    <nav className='nav-bar'>
+      <ul className='menu-items'>
+          {MENU_ITEMS.map((item) => (
+            <li className='menu-item' key={item}>{item}</li>
+          ))}
+      </ul>
+    </nav>
     </section>
   )
 }

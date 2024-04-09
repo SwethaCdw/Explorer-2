@@ -2,7 +2,6 @@
 
 .card-container {
   position: relative;
-  display: inline-block;
   margin: 30px auto;
   width: 30%;
   padding: 10px;
@@ -11,11 +10,9 @@
     object-fit: cover;
     width: 100%;
     height: 300px;
-    max-width: 400px;
   }
 
   .title {
-    width: 100%;
     margin: 10px 0;
     font-size: $font-size-medium;
     font-weight: 300;
@@ -25,13 +22,15 @@
     font-weight: 700;
   }
 
+  .description {
+    margin-bottom: 75px;
+    margin-top: 25px;
+  }
+
   .read-more-button {
     position: absolute;
     bottom: 20px;
   }
 
-  .description {
-    margin-bottom: 75px;
-    margin-top: 25px;
-  }
+  
 }

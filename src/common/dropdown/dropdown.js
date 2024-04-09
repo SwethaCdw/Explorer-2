@@ -11,8 +11,8 @@ export default function Dropdown(props) {
     <div className='dropdown'>
         <select className={props.className} onChange={handleChange}>
             <option value="" disabled selected>{DROPDOWN_PLACEHOLDER}</option>
-            {placesData.map((item) => {
-            return <option value={item.city}>{item.city}</option>  
+            {placesData.map((item, index) => {
+            return <option key={index} value={item.city}>{item.city}</option>  
                 })}
         </select>
     </div>     

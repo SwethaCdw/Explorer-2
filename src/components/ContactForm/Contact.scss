@@ -1,50 +1,71 @@
- @import '../../styles/variables.scss';
-.contact-section{
+@import '../../styles/variables.scss';
+@import '../../styles/colors.scss';
+
+.contact-section {
     padding-top: 50px;
     height: 650px;
-}
-.contact-title,.contact-card{
-    width: 40%;
-    margin: 30px auto;
 
-}
-.contact-title{
-    color: rgb(112, 32, 83);
-    h1{
-        font-size: $font-size-large;
-        font-weight: 500;
-      }
-      p {
-        font-weight: 400;
-      }
+    .contact-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 0;
+        background-color: $contact-wrapper-background;
 
-}
-.contact-card{
-    width: 40%;
-    
-}
-.contact-caption{
-    color: rgb(140, 77, 119);
-    font-size: $font-size-small;
-}
-.contact-wrapper{
-    width:100%;
-    margin: 0 auto;
-    padding: 50px 0;
-    background-color: #f8f7f7 ;
-}
-.form-group{
-    font-weight: 500;
-    margin: 40px 0;
-}
-select, input[type=text],input[type=number]{
-    width: 100%;
-    height:50px;
-    padding-left: 10px;
-    margin-top: 5px;
-    border: 0.5px solid black;
-    background-color: transparent;
-}
-.submit-button{
-    margin: 0;
+        .contact-title,
+        .contact-card {
+            width: 40%;
+            margin: 30px auto;
+
+            h1 {
+                font-size: $font-size-large;
+                font-weight: 500;
+                color: $primary-color;
+            }
+
+            p {
+                font-size: $font-size-small;
+                font-weight: 300;
+                color: $primary-color;
+            }
+        }
+
+        .contact-card {
+            width: 40%;
+        }
+
+        .contact-caption {
+            font-size: $font-size-small;
+            color: $primary-color;
+        }
+
+        .form-group {
+            font-weight: 500;
+            margin: 40px 0;
+
+            select,
+            input[type='text'],
+            input[type='number'] {
+                width: 100%;
+                height: 50px;
+                padding-left: 10px;
+                margin-top: 5px;
+                border: 0.5px solid $border-color;
+                background-color: transparent;
+            }
+        }
+
+        .submit-button {
+            margin: 0;
+        }
+
+        .error-message {
+            color: $error-color;
+            margin-top: 10px;
+            display: none;
+
+            &.show {
+                display: block;
+            }
+        }
+    }
 }

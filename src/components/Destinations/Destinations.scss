@@ -1,36 +1,35 @@
 @import '../../styles/variables.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
 
-.read-more{
-    padding: 15px;
-    color: white;
-    display:inline-block;
-    background-color:#7a1755;
-    margin: 25px 120px 0px 0px; 
-  }
-  .container{
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-  }
-  .content-title,.content{
+
+.destinations {
+  margin: 0 auto;
+  width: 95%;
+  .content-title, .content-caption{
     padding-left: 30px;
   }
-  .content-title{
-    color: rgb(112, 32, 83);
-    h1{
-      font-size: $font-size-large;
-      font-weight: 500;
-    }
-    p {
-      font-weight: 400;
-    }
+  .content-title {
+    color: $primary-color;
+
+      h1 {
+        font-size: $font-size-large;
+        font-weight: 500;
+      }
+
+      p {
+        font-weight: 400;
+      }
   }
-  .content{
+  .content-caption {
     font-size: $font-size-small;
-    font-weight: 400;
-    color: rgb(142, 79, 121);
+    font-weight: 300;
+    color: $primary-color;
   }
-  .destinations {
-    margin: 0 auto;
-    width: 95%;
+
+  .card-container-wrapper{
+    @include flex-align(space-evenly, normal);
+    flex-wrap: wrap;
   }
+  
+}

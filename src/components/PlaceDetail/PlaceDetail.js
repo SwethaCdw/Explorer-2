@@ -1,3 +1,4 @@
+import { TEMPERATURE, TEMPERATURE_UNIT } from '../../constants/constants';
 import './PlaceDetail.css';
 
 const PlaceDetail = ({ place }) => {
@@ -9,7 +10,7 @@ const PlaceDetail = ({ place }) => {
                     <div className="quote">
                         <p>{place.place}</p>
                     </div>
-                    <p className='temperature'>32&deg;C</p>
+                    <p className='temperature'>{TEMPERATURE}{TEMPERATURE_UNIT}</p>
                 </div>
                 <div className="logo">
                     <img src={place.image} alt={place.city} />

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import DropdownComponent from '../../common/dropdown/dropdown';
 import { Link } from 'react-router-dom';
-import './Promos.css';
 import promoImage from '../../assets/bike.png';
-import { EXPLORE_BUTTON, MAIN_CAPTION, MAIN_TITLE } from '../../constants/constants';
+import { EXPLORE_BUTTON, MAIN_CAPTION, MAIN_CAPTION_SOUTH, MAIN_TITLE } from '../../constants/constants';
 import { handleImageError } from '../../utils/utils';
+import './Promos.css';
 
 
 const Promo = () => {
@@ -20,7 +20,7 @@ const Promo = () => {
         <section className='caption-section'>
           <div className='caption-wrapper'>
             <div className='topic'>{MAIN_TITLE}</div>
-            <div className='description'>{MAIN_CAPTION} <span>SOUTH</span></div>
+            <div className='description'>{MAIN_CAPTION} <span>{MAIN_CAPTION_SOUTH}</span></div>
           </div>
           <div>
             <DropdownComponent className={'explore-place'} dropDown={'place'} dropDownData={handlePlaceSelection}/>
