@@ -1,4 +1,17 @@
-export const MENU_ITEMS = ['Hotels', 'Bike Rentals', 'Restaurants'];
+export const MENU_ITEMS = [
+    {
+        MENU_ITEM: 'Hotels',
+        PATH: '/hotel'
+    },
+     {
+        MENU_ITEM : 'Bike Rentals',
+        PATH: '/rentals'
+    },
+    {
+        MENU_ITEM : 'Restaurants',
+        PATH: '/restaurants'
+    }
+];
 
 export const MAIN_TITLE = 'WELCOME TO EXPLORER';
 export const MAIN_CAPTION = `Your Adventure Travel Expert in the `;

@@ -13,6 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/place/:placeName" element={<Details />} />
+        <Route path="/hotel" element={<Home />} />
+        <Route path="/rentals" element={<Home />} />
+        <Route path="/restaurants" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer /> 

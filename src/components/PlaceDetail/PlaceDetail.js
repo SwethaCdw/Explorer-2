@@ -8,7 +8,7 @@ const PlaceDetail = ({ place }) => {
         <div className="place-detail-container">
             <div className="place-promo">
                 <div className="place-highlight">
-                    <p className="title"> {place.city}</p>
+                    <p className="title"> {place?.city}</p>
                     <div className="quote">
                         <p>{place.place}</p>
                     </div>

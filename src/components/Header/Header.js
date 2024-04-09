@@ -2,6 +2,7 @@ import React from 'react'
 import "./Header.css"
 import Logo from '../Logo/Logo';
 import { MENU_ITEMS } from '../../constants/constants';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
     <nav className='nav-bar'>
       <ul className='menu-items'>
           {MENU_ITEMS.map((item) => (
-            <li className='menu-item' key={item}>{item}</li>
+            <Link to={item.PATH} ><li className='menu-item' key={item.MENU_ITEM}>{item.MENU_ITEM}</li></Link> 
           ))}
       </ul>
     </nav>
