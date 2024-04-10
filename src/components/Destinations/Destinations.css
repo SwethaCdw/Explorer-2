@@ -1,9 +1,9 @@
 .destinations {
   margin: 0 auto;
-  width: 95%;
+  width: 92%;
 }
 .destinations .content-title, .destinations .content-caption {
-  padding-left: 30px;
+  padding-left: 10px;
 }
 .destinations .content-title {
   color: #7a1655;

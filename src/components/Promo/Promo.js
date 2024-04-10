@@ -26,7 +26,7 @@ const Promo = () => {
           </div>
           <div>
             <DropdownComponent className={'explore-place'} dropDown={'place'} dropDownData={handlePlaceSelection}/>
-            <Link to={`/place/${explorePlace}`}>
+            <Link to={`/place/${explorePlace.toLowerCase()}`}>
               <button>{EXPLORE_BUTTON}</button>
             </Link>
           </div>  

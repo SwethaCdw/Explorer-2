@@ -11,7 +11,7 @@ import { SIMILAR_DESTINATIONS_QUOTE, SIMILAR_DESTINATIONS_TITLE } from '../const
 const Details = () => {
     const { placeName } = useParams();
     // Find the place object for the given placeName
-    const placeObject = placesData.find(place => place.city === placeName);
+    const placeObject = placesData.find(place => place.city.toLowerCase() === placeName);
 
     // Get related places for the current place
     const relatedPlacesObject = placeObject?.relatedPlaces

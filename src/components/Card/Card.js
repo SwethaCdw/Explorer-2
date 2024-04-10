@@ -12,7 +12,7 @@ const Card = ({ title, location, desc, imageSource}) => {
       <p className='title'>{title}</p>
       <p className='city-names'>{location}</p>
       <p className="description"> {desc}</p>
-      <Link to={`/place/${location}`} ><button className="read-more-button" onClick={scrollToTop}>{READ_MORE_BUTTON}</button></Link>
+      <Link to={`/place/${location.toLowerCase()}`} ><button className="read-more-button" onClick={scrollToTop}>{READ_MORE_BUTTON}</button></Link>
     </div>
   )
 }

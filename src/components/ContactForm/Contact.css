@@ -40,10 +40,11 @@
 .contact-section .contact-wrapper .form-group input[type=number] {
   width: 100%;
   height: 50px;
-  padding-left: 10px;
+  padding-left: 20px;
   margin-top: 5px;
   border: 0.5px solid #000;
   background-color: transparent;
+  color: #808080;
 }
 .contact-section .contact-wrapper .submit-button {
   margin: 0;
