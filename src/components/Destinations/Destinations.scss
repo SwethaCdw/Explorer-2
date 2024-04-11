@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+
+.destinations {
+  margin: 0 auto;
+  width: 92%;
+  .content-title, .content-caption{
+    padding-left: 10px;
+  }
+  .content-title {
+    color: $primary-color;
+
+      h1 {
+        font-size: $font-size-large;
+        font-weight: 500;
+      }
+
+      p {
+        font-weight: 400;
+      }
+  }
+  .content-caption {
+    font-size: $font-size-small;
+    font-weight: 300;
+    color: $primary-color;
+  }
+
+  .card-container-wrapper{
+    @include flex-align(space-evenly, normal);
+    flex-wrap: wrap;
+  }
+  
+}

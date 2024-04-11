@@ -1,0 +1,11 @@
+@import '../../styles/colors.scss';
+
+.explore-place{
+    position: absolute;
+    width: 45%;
+    height: 50px;
+    padding-left: 10px;
+    background-color: $dropdown-background;
+    color: $dropdown-placeholder;
+}
+

@@ -1,0 +1,34 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+.header {
+    background-color: $dropdown-background;
+    padding: 20px;
+    @include flex-align(space-between);
+  
+    .logo {
+      width: 140px;
+      height: 35px;
+      cursor: pointer;
+    }
+  
+    .menu-items {
+      display: flex;
+      list-style-type: none;
+  
+      .menu-item {
+        margin-left: 35px;
+        margin-bottom: 5px;
+        color: $primary-color;
+  
+        a {
+          text-decoration: none;
+          color: $primary-color;
+        }
+  
+        &.active a {
+          font-weight: bold;
+          color: $error-color;
+        }
+      }
+    }
+  }

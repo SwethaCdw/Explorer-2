@@ -1,0 +1,28 @@
+.destinations {
+  margin: 0 auto;
+  width: 92%;
+}
+.destinations .content-title, .destinations .content-caption {
+  padding-left: 10px;
+}
+.destinations .content-title {
+  color: #7a1655;
+}
+.destinations .content-title h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.destinations .content-title p {
+  font-weight: 400;
+}
+.destinations .content-caption {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #7a1655;
+}
+.destinations .card-container-wrapper {
+  display: flex;
+  align-items: normal;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=Destinations.css.map */

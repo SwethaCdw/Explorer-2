@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.card-container {
+  position: relative;
+  margin: 30px auto;
+  width: 33%;
+  padding: 10px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+  }
+
+  .title {
+    margin: 10px 0;
+    font-size: $font-size-medium;
+    font-weight: 300;
+  }
+
+  .city-names {
+    font-weight: 700;
+  }
+
+  .description {
+    margin-bottom: 75px;
+    margin-top: 25px;
+  }
+
+  .read-more-button {
+    position: absolute;
+    bottom: 20px;
+  }
+
+  
+}

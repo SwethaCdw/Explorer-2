@@ -1,0 +1,34 @@
+.welcome-page {
+  display: flex;
+  color: #7a1655;
+  margin-bottom: 75px;
+}
+.welcome-page .caption-section {
+  flex: 1 1 40%;
+  padding: 10% 0 45px 7%;
+}
+.welcome-page .caption-section .caption-wrapper .topic {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+.welcome-page .caption-section .caption-wrapper .description {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 80px;
+  padding-right: 35px;
+}
+.welcome-page .caption-section .caption-wrapper .description span {
+  font-weight: bold;
+}
+.welcome-page .caption-section button {
+  margin-top: 70px;
+}
+.welcome-page .image-section {
+  flex: 1 1 60%;
+}
+.welcome-page .image-section img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=Promos.css.map */
